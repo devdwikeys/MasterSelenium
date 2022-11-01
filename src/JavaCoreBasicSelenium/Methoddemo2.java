@@ -1,6 +1,6 @@
 package JavaCoreBasicSelenium;
 
-public class MethodDemo2 {
+public class Methoddemo2 {
     public int getUserReturn(){
         return 5;
     }

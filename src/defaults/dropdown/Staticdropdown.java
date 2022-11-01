@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
 
-public class StaticDropdown {
+public class Staticdropdown {
 
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "E:\\MasterSelenium\\PathWebDriver\\chromedriver.exe");

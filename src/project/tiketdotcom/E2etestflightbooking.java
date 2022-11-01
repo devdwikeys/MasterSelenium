@@ -10,7 +10,7 @@ import org.testng.Assert;
 import java.time.Duration;
 import java.util.List;
 
-public class e2eTestFlightBooking {
+public class E2etestflightbooking {
 
     public static void main(String[] args) throws InterruptedException {
 

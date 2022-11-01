@@ -7,7 +7,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class HandlingAlertJS {
+public class Handlingalertjavascript {
 
     public static void main(String[] args) throws InterruptedException {
 

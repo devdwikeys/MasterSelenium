@@ -1,11 +1,11 @@
 package JavaCoreBasicSelenium;
 
-public class MethodDemo {
+public class Methoddemo {
 
     public static void main(String[] args) {
 
         //how to calling some method we should create an object from that class
-        MethodDemo callMethod = new MethodDemo();
+        Methoddemo callMethod = new Methoddemo();
         callMethod.getData();
 
         // how to store the value return is storing in a new object
@@ -13,7 +13,7 @@ public class MethodDemo {
         System.out.println(hai);
 
         //how to calling method from other class
-        MethodDemo2 number = new MethodDemo2();
+        Methoddemo2 number = new Methoddemo2();
         number.getUserReturn();
         System.out.println(number.getUserReturn());
 

@@ -1,6 +1,6 @@
 package JavaCoreBasicSelenium;
 
-public class CoreJavaBrushUp1 {
+public class Corejavabrushup1 {
 
     public static void main(String[] args) {
 

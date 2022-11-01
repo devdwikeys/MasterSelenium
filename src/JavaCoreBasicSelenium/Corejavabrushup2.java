@@ -2,7 +2,7 @@ package JavaCoreBasicSelenium;
 
 import java.util.ArrayList;
 
-public class CoreJavaBrushUp2 {
+public class Corejavabrushup2 {
 
     public static void main(String[] args) {
 

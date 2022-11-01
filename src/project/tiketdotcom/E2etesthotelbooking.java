@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 import java.util.List;
 
-public class e2eTestHotelBooking {
+public class E2etesthotelbooking {
 
     public static void main(String[] args) {
 

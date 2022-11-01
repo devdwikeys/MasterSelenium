@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class BrowserActivities {
+public class Browseractivities {
 
     public static void main(String[] args) {
 

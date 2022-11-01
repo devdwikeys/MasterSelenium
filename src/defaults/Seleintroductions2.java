@@ -7,7 +7,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class SeleIntroductions2 {
+public class Seleintroductions2 {
     public static void main(String[] args) throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver", "E:\\MasterSelenium\\PathWebDriver\\chromedriver.exe");
@@ -15,7 +15,7 @@ public class SeleIntroductions2 {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         //To use method to create an object from class
-        SeleIntroductions2 callMethod = new SeleIntroductions2();
+        Seleintroductions2 callMethod = new Seleintroductions2();
         String name = "Qarenina";
         //in the test case will do this method first
         String password = callMethod.getPassword(driver);

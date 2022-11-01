@@ -7,7 +7,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class UpdatedDropdown {
+public class Updateddropdown {
 
     public static void main(String[] args) throws InterruptedException {
 

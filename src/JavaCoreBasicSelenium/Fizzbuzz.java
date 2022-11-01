@@ -2,7 +2,7 @@ package JavaCoreBasicSelenium;
 
 import java.util.Scanner;
 
-public class FizzBuzz {
+public class Fizzbuzz {
 
     public static void main(String[] args) {
 

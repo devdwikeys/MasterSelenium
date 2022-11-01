@@ -7,7 +7,7 @@ import org.testng.Assert;
 
 import java.time.Duration;
 
-public class ValidationDynamic {
+public class Validationdynamic {
 
     public static void main(String[] args) {
 
