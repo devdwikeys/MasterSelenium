@@ -1,4 +1,4 @@
-package JavaCoreBasicSelenium;
+package JavaChallenge;
 
 import java.util.Scanner;
 

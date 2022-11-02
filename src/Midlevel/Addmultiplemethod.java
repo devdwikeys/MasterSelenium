@@ -25,10 +25,10 @@ public class Addmultiplemethod {
         //declare an object to input multipleSearching item
         String[] itemNeeded = {"Brocolli","Cucumber","Beetroot", "Beans", "Brinjal"};
 
-        //implicit wait will targeting globally an locator on this code
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //implicit wait will targeting globally element
+        //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         //create an object to create global explicit wait
-        //WebDriverWait explicitWait = new WebDriverWait(driver,5);
+        WebDriverWait explicitWait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.manage().window().maximize();
         driver.get("https://rahulshettyacademy.com/seleniumPractise/");
         Thread.sleep(3000);
@@ -37,12 +37,12 @@ public class Addmultiplemethod {
         //continue the testcase to do checkout
         driver.findElement(By.xpath("//img[@alt='Cart']")).click();
         driver.findElement(By.xpath("//*[text()='PROCEED TO CHECKOUT']")).click();
-        Thread.sleep(3000);
+        explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@class='promoCode']")));
         driver.findElement(By.xpath("//input[@class='promoCode']")).sendKeys("rahulshettyacademy");
         driver.findElement(By.xpath("//button[@class='promoBtn']")).click();
         //implement explicit wait
         //explicit wait only work on targetting object not an global like implicit
-        //explicitWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[@class='promoInfo']")));
+        explicitWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[@class='promoInfo']")));
         System.out.println(driver.findElement(By.xpath("//span[@class='promoInfo']")).getText());
 
 
