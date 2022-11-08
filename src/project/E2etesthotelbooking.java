@@ -1,4 +1,4 @@
-package project.tiketdotcom;
+package project;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
