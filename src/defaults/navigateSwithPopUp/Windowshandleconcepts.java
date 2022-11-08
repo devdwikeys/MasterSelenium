@@ -8,6 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
+import java.util.Iterator;
+import java.util.Set;
 
 public class Windowshandleconcepts {
 
@@ -17,10 +19,22 @@ public class Windowshandleconcepts {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
-        driver.get("https://www.tokopedia.com/");
+        driver.get("https://rahulshettyacademy.com/loginpagePractise/");
 
-        Actions actions = new Actions(driver);
-        WebElement rightClick = driver.findElement(By.xpath("//*[text()='tv android']"));
-        actions.moveToElement(rightClick).contextClick().keyUp(Keys.ARROW_DOWN).click().build().perform();
+        //click the element link will open in new tab
+        driver.findElement(By.xpath("//*[@class='blinkingText']")).click();
+        //how to switch the tab/windows into other
+        //we should declare to store parentWindows/tab and childWindows/tab
+        Set<String> windows = driver.getWindowHandles(); //store the value of [parentID, childID]
+        Iterator<String> it = windows.iterator();
+        String parentId = it.next();
+        String childId = it.next();
+        //how to switch from parentId/Web/tab into childId/parent/tab
+        driver.switchTo().window(childId);
+        System.out.println(driver.findElement(By.xpath("//p[@class='im-para red']")).getText()
+                .split("at")[1].trim().split(" ")[0]);
+        String getEmail = driver.findElement(By.xpath("//p[@class='im-para red']")).getText().split("at")[1].trim().split(" ")[0];
+        driver.switchTo().window(parentId);
+        driver.findElement(By.xpath("//*[@id='username']")).sendKeys(getEmail);
     }
 }
