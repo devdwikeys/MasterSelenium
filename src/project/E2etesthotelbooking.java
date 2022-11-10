@@ -11,7 +11,7 @@ import java.util.List;
 
 public class E2etesthotelbooking {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
         System.setProperty("webdriver.chrome.driver", "E:\\MasterSelenium\\PathWebDriver\\chromedriver.exe");
@@ -32,6 +32,23 @@ public class E2etesthotelbooking {
                 break;
             }
         }
+        WebElement today = driver.findElement(By.xpath("//div[text()='Hari ini']/following-sibling::div[@class='day-mod-body with-cheapest']"));
+        today.click();
+        int todayDate = Integer.parseInt(today.getText());
+        System.out.println(todayDate);
+        int oneWeeksDate = todayDate + 7;
+        String oneWeekDate = String.valueOf(oneWeeksDate);
+        List<WebElement> endDate = driver.findElements(By.xpath("//div[@class='day-mod-body ']"));
+        System.out.println(endDate.size());
+        System.out.println(oneWeeksDate);
+        Thread.sleep(2000);
+        for (WebElement selectEndDate: endDate){
+            if (selectEndDate.getText().equals(oneWeekDate)){
+                selectEndDate.click();
+                break;
+            }
+        }
+
 
     }
 }

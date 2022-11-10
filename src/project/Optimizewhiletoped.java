@@ -24,6 +24,7 @@ public class Optimizewhiletoped {
         //Declare webelement to store dynamic link
         WebElement butonMenu = driver.findElement(By.xpath("//*[@data-testid='btnSellereduSelectedtopicSlideright']"));
         List<WebElement> tabLink = butonMenu.findElements(By.xpath("//*[contains(@data-testid,'icnSellereduSelectedtopicDynamicIcon')]"));
+        System.out.println(tabLink.size());
         for ( WebElement clickLink : tabLink){
             Actions ctrl = new Actions(driver);
             ctrl.moveToElement(clickLink).keyDown(Keys.CONTROL).click().build().perform();
@@ -34,6 +35,7 @@ public class Optimizewhiletoped {
         while (it.hasNext()){
             driver.switchTo().window(it.next());
             System.out.println(driver.getCurrentUrl());
+            Thread.sleep(2000);
         }
     }
 }
